@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2a0a1a">
+  <title>Happy 4th Anniversary</title>
+  <!-- Inline emoji favicon: saves a request and a 404 -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9D%A4%EF%B8%8F%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!--
+    ====== EDIT ME ======
+    1. Text: change anything in [brackets] below.
+    2. Image: put your photo in assets/ and change the <img src> in the "photo" section.
+    3. Song: put your song at assets/song.mp3 (or change the <audio src>).
+  -->
+
+  <div class="hearts" id="hearts" aria-hidden="true"></div>
+
+  <main class="hero">
+    <p class="eyebrow">For Janella Tan</p>
+    <h1>Happy 4th<br>Anniversary</h1>
+    <p class="sub">Four years of you and me ♥</p>
+
+    <button class="envelope" id="envelope" type="button" aria-label="Open your anniversary letter">
+      <span class="env-back"></span>
+      <span class="env-letter"></span>
+      <span class="env-front"></span>
+      <span class="env-flap"></span>
+      <span class="env-seal">♥</span>
+    </button>
+    <p class="hint" id="hint">Tap the envelope</p>
+  </main>
+
+  <!-- Step 1: photo. Tap it to continue. -->
+  <div class="overlay" id="photo" aria-hidden="true">
+    <button class="card polaroid" id="photoCard" type="button" aria-label="Photo. Tap to read my message">
+      <img src="assets/h0369cJN.jpg" alt="Our photo" width="600" height="600" decoding="async">
+      <span class="caption">Picture natin sa Banahaw hehe ang cute natin dito.</span>
+      <span class="tap">tap to continue</span>
+    </button>
+  </div>
+
+  <!-- Step 2: message -->
+  <div class="overlay" id="note" aria-hidden="true">
+    <section class="card letter" id="noteCard" tabindex="-1" aria-label="Anniversary message">
+      <h2>My Dearest Ane,</h2>
+      <p>Happy 4th Anniversary to us! Maraming maraming salamat sa lahat lahat ng binibigay at ginagawa mo para saakin. Hinding hindi ako mag sasawa na intindihin, pag silbihan at ibigay sayo lahat. Ikaw ang kasama ko sa hirap at ginhawa, lalong lalo na sa mga araw na walang wala ako. Thank you kasi walang humpay ang pag iintindi mo sa akin kahit na nakakaubos din ako ng pasensya. Salamat kasi naanjan ka palagi para saakin, sinasamahan mo ako sa hirap, nag titiyaga ka para sa akin dahil malaki ang tiwala mo na makakaya ko, na magiging successful ako. Sobra sobrang thankful at masaya ako lately simula nung ako'y pinapayag payagan mo na ako sa mga gala ko kasama mga kaibigan. Sobrang na aappreciate at sobrang grateful ko dun 🥹 Hindi ko sasayangin at sisirain ang tiwala mo hon maraming maraming salamat.</p>
+      <p>Sobrang haba na ng pag sasama natin, at mas hahaba pa yon hanggang sa maging wedding anniversaries na natin, and then birthdays ng anak natin. Sobrang saya ko na iimagine ko palang yung mga time na yon kahit wala pa tuwang tuwa na ang puso ko. Alam ko na hindi pa tayo ready para dun, kahit ako din naman at sobrang takot din ako about dun lalong lalo ngayon. Pero hon, ikaw na ikaw na talaga ang gusto ko makasama mapakasalan at lalong lalo na gustong gusto ko na mag sama na tayo sa isang bahay (soon) huhuhu. Hindi ko na pahahabain pa ng sobra hon. Maraming maraming salamat sa lahat. I'm really sorry for my mistakes and shortcomings. Mahal na mahal na mahal kita hon! Thank you for everything. I love you so so much honey and I hope na hindi ka magsawa sa akin, lalo na sa ugali ko. Happy 4th Anniversary🫶💋 </p>
+      <p class="sign">Forever yours,<br>Isho ♥</p>
+    </section>
+  </div>
+
+  <button class="mute" id="mute" type="button" aria-pressed="false" aria-label="Mute music" hidden>♪</button>
+
+  <!-- preload="none": nothing is downloaded until the first tap -->
+  <audio id="song" src="assets/forever.mp3" loop preload="none"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
